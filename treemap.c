@@ -130,6 +130,10 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         return;
     }
 
+    TreeNode * sucesor = minimum(node -> right);
+    node -> pair -> key = sucesor -> pair -> key;
+    node -> pair -> value = sucesor -> pair -> value;
+    removeNode(tree, sucesor);
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
