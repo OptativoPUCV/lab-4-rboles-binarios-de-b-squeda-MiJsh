@@ -185,9 +185,9 @@ Pair * nextTreeMap(TreeMap * tree) {
     TreeNode * current = tree -> current;
 
     if (current -> right != NULL) {
-        TreeNode * sucesor = minumum(current -> right);
-        tree -> current = sucesor;
-        return sucesor -> pair;
+        TreeNode *Aux = minumum(current->right);
+        tree->current = Aux;
+        return Aux -> pair;
     }
 
     TreeNode * parent = current -> parent;
