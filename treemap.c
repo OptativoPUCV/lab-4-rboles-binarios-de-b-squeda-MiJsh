@@ -73,6 +73,15 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
             actual = actual -> right;
         }
     }
+
+    nuevoNodo-> parent = papito;
+    if (tree->lower_than(key, papito -> pair -> key)) {
+        papito -> left = nuevoNodo;
+    } else {
+        papito -> right = nuevoNodo;
+    }
+
+    tree-> current = nuevoNodo;
 }
 
 TreeNode * minimum(TreeNode * x){
